@@ -21,7 +21,7 @@ def change_can_ids_to_zero(input_file, output_file):
                     timestamp = match.group(1)
                     # Replace CAN ID with 0, preserving data
                     data = match.group(3)
-                    modified_line = f"{timestamp} 0{data}\n"
+                    modified_line = f"{timestamp} 000{data}\n"
                     f_out.write(modified_line)
                 else:
                     # If line doesn't match expected format, write as-is
